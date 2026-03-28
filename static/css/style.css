@@ -1,0 +1,445 @@
+/* =========================================
+   MODERN PORTFOLIO UI - DARK BLUE / WHITE / ORANGE
+   Senior-Level Clean UI System
+   ========================================= */
+
+:root {
+    --primary: #0b3c5d;      /* Dark Blue */
+    --secondary: #ff7a00;    /* Orange */
+    --light: #ffffff;        /* White */
+    --background: #f4f7fb;
+    --text-dark: #1a1a1a;
+    --text-light: #6b7280;
+
+    --radius: 14px;
+    --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s ease;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: var(--primary);
+    color: var(--light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-soft);
+}
+
+nav strong {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: var(--light);
+    text-decoration: none;
+    margin-left: 28px;
+    font-weight: 500;
+    position: relative;
+    transition: var(--transition);
+}
+
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--secondary);
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transition: var(--transition);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: var(--secondary);
+}
+
+/* =========================================
+   CONTAINER
+   ========================================= */
+
+.container {
+    padding: 60px 8%;
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 18px;
+    color: var(--primary);
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 28px;
+}
+
+.hero-text a {
+    display: inline-block;
+    padding: 14px 28px;
+    background: var(--secondary);
+    color: var(--light);
+    text-decoration: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.hero-text a:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* pushes image to the right */
+    align-items: center;
+    min-width: 280px;
+    padding-left: 40px; /* creates a clean gap between text and image */
+}
+
+.hero-image img {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 8%;
+    border: 6px solid var(--secondary);
+    box-shadow: var(--shadow-soft);
+}
+
+/* =========================================
+   PROJECTS SECTION
+   ========================================= */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: var(--light);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h2 {
+    font-size: 20px;
+    padding: 18px 18px 6px 18px;
+    color: var(--primary);
+}
+
+.project-card p {
+    padding: 0 18px 22px 18px;
+    color: var(--text-light);
+    font-size: 15px;
+}
+
+/* =========================================
+   HEADINGS
+   ========================================= */
+
+h1 {
+    color: var(--primary);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   BUTTON SYSTEM
+   ========================================= */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background: var(--secondary);
+    color: var(--light);
+}
+
+.btn-primary:hover {
+    background: var(--primary);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: var(--light);
+}
+
+/* =========================================
+   ABOUT / PROFILE PAGE
+   ========================================= */
+
+.about-text {
+    max-width: 900px;
+    margin-bottom: 50px;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.about-text p {
+    font-size: 17px;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Creative Stack Section */
+
+.creative-stack {
+    margin-top: 30px;
+}
+
+.creative-stack h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.creative-stack > p {
+    color: var(--text-light);
+    margin-bottom: 28px;
+}
+
+.stack-group {
+    background: var(--light);
+    padding: 22px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 18px;
+    transition: var(--transition);
+}
+
+.stack-group:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.stack-group h3 {
+    color: var(--primary);
+    margin-bottom: 14px;
+    font-size: 18px;
+}
+
+.stack-group span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    background: rgba(255, 122, 0, 0.1);
+    color: var(--primary);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 6px 6px 0 0;
+    transition: var(--transition);
+}
+
+.stack-group span:hover {
+    transform: translateY(-2px) scale(1.05);
+    background: var(--secondary);
+    color: var(--light);
+}
+
+/* Icon styling for tech badges */
+
+.tech-icon {
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Subtle badge animation */
+
+@keyframes badgeFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+}
+
+.stack-group span {
+    animation: badgeFloat 3s ease-in-out infinite;
+}
+
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
+
+.contact-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-text h2 {
+    font-size: 34px;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.contact-text p {
+    color: var(--text-light);
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.contact-item {
+    background: var(--light);
+    padding: 18px 22px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: var(--transition);
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.contact-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    background: var(--secondary);
+    color: var(--light);
+}
+
+.contact-icon {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================
+   FOOTER (future-ready)
+   ========================================= */
+
+footer {
+    margin-top: 80px;
+    background: var(--primary);
+    color: var(--light);
+    padding: 30px;
+    text-align: center;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-image {
+        justify-content: center;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    nav {
+        padding: 16px 24px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .container {
+        padding: 40px 6%;
+    }
+
+}
