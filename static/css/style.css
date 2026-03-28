@@ -48,6 +48,21 @@ nav {
     box-shadow: var(--shadow-soft);
 }
 
+/* Navigation links container */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+/* Hamburger button (hidden on desktop) */
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
 nav strong {
     font-size: 20px;
     letter-spacing: 1px;
@@ -105,6 +120,9 @@ nav a:hover {
 .hero-text {
     flex: 1;
     min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically aligns text with image */
 }
 
 .hero-text h1 {
@@ -147,7 +165,7 @@ nav a:hover {
 .hero-image img {
     width: 320px;
     max-width: 100%;
-    border-radius: 8%;
+    border-radius: 50%;
     border: 6px solid var(--secondary);
     box-shadow: var(--shadow-soft);
 }
@@ -416,11 +434,59 @@ footer {
 
 @media (max-width: 768px) {
 
+    nav {
+        padding: 16px 24px;
+    }
+
+    /* Show hamburger */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Sidebar navigation */
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -260px;
+        width: 260px;
+        height: 100vh;
+        background: var(--primary);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px 24px;
+        gap: 18px;
+        transition: var(--transition);
+        box-shadow: var(--shadow-hover);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        font-size: 18px;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Hero adjustments remain */
+
     .hero {
         flex-direction: column;
         text-align: center;
         gap: 30px;
     }
+
+    .hero-image {
+        justify-content: center;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+}
 
     .hero-image {
         justify-content: center;
