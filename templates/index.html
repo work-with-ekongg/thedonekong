@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Don Ekong - Home {% endblock %}
+
+{% block content %} 
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Hey👋, I'm Don</h1>
+            <p>
+                I build high-impact digital systems and future-focused software
+            </p>
+            <a href="/projects">Discover</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename="images/IMG_5162.JPG") }}" alt="Don Ekong">
+    </div>
+{% endblock %}
